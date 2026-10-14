@@ -1,0 +1,11 @@
+task_id: refund-01
+allow_tools: [get_order, refund, write_audit]
+forbid_resource_prefixes: ["tenantB:"]
+plan:
+  - tool: get_order
+    args: {order_id: "tenantA:1001"}
+  - tool: refund
+    args: {order_id: "tenantA:1001", amount: 20}
+  - tool: write_audit
+    args: {order_id: "tenantA:1001"}
+# negative example plan (ACL): use order_id tenantB:9
