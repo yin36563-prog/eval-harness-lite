@@ -1,0 +1,43 @@
+name: 已购买 / 咨询模板三件套
+description: 想买或已买「Agent 落地模板三件套」的轻量登记。请勿在 Issue 粘贴付费文件。
+title: "[三件套] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本仓是 **MIT 开源评测骨架**，不包含付费模板或 Private Rules 文件。
+
+        **请先在爱发电购买「Agent 落地模板三件套」（¥49）：**
+        - 商品：https://afdian.com/item/313b5ee4c6af11f18d555254001e7c00
+        - 主页（周报 / 摘要）：https://afdian.com/a/laoyinai
+
+        **Private Rules / 工单只走微信，不在爱发电上架：**
+        - 备注「规则」→ Private Rules
+        - 备注「工单」→ 规则 + 一周异步答疑
+
+        本 Issue 公开可见，只做「已购买 / 咨询」登记。不要粘贴规则包、网盘链接、密钥或客户数据。
+  - type: dropdown
+    id: status
+    attributes:
+      label: 状态
+      options:
+        - 准备在爱发电购买，先咨询
+        - 已在爱发电购买模板三件套
+        - 其他（开源骨架缺陷请改用 Bug 报告）
+    validations:
+      required: true
+  - type: input
+    id: order
+    attributes:
+      label: 爱发电订单号（已购买时填写）
+      description: 可选。只填订单号，不要粘贴付费文件内容。
+    validations:
+      required: false
+  - type: textarea
+    id: note
+    attributes:
+      label: 想确认的问题
+      description: 公开可见。不要粘贴 Private Rules、密钥或客户数据。
+      placeholder: 例如：三件套和本仓 harness 怎么一起用？
+    validations:
+      required: true

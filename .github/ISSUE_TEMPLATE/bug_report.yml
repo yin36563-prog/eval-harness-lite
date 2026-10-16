@@ -1,0 +1,33 @@
+name: Bug 报告
+description: MIT 开源评测骨架的问题：跑不通、计分不对、文档错误。
+title: "[bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这里只收 **MIT 开源骨架** 的缺陷。付费模板不在本仓。
+
+        - 三件套（¥49）：https://afdian.com/item/313b5ee4c6af11f18d555254001e7c00
+        - 爱发电主页：https://afdian.com/a/laoyinai
+        - Private Rules 只走微信（备注「规则」/「工单」），不在爱发电上架。
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么
+      description: 期望行为与实际行为。
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 如何复现
+      description: 命令、输入任务、Python 版本。不要附带付费规则或客户数据。
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 环境
+      placeholder: Python 3.x / OS
+    validations:
+      required: false
